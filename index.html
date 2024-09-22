@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Way</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <main class="w-[600px] mx-auto">
+        <h1 class="text-xl text-center mt-5 mb-5 font-bold text-green-400">Programmer Expenses Assistant</h1>
+
+        <div class="flex justify-around">
+            <div><button class="bg-green-300 text-lg hover:bg-orange-300 transition-2s ease-in-out text-white p-3 px-12 rounded-xl">Assistant</button></div>
+            <div><button class="bg-green-300 text-lg hover:bg-orange-300 transition-2s ease-in-out text-white p-3 px-14 rounded-xl">History</button></div>
+        </div>
+
+        <div class="ml-16 mt-5">
+            <label class="form-control"></label>
+                <div class="label">
+                  <span class="label-text text-lg font-semibold">Income</span>                
+                </div>
+                <input id="income-input" type="text" placeholder="Your Income Amount" class="input input-bordered w-full" />  
+              </label>
+        </div>
+
+        <div>
+            <div class="ml-16 mt-5 grid grid-cols-2 gap-4 justify-around  items-center">
+                <label class="form-control">
+                    <div class="label">
+                      <span class="label-text text-lg font-semibold">Software</span>                
+                    </div>
+                    <input id="software-input" type="text" placeholder="Cost" class="input input-bordered" />  
+                  </label>
+                <label class="form-control">
+                    <div class="label">
+                      <span class="label-text text-lg font-semibold">Couses</span>                
+                    </div>
+                    <input id="couses-input" type="text" placeholder="Cost" class="input input-bordered" />  
+                  </label>
+                <label class="form-control">
+                    <div class="label">
+                      <span class="label-text text-lg font-semibold">Internet</span>                
+                    </div>
+                    <input id="internet-input" type="text" placeholder="Cost" class="input input-bordered" />  
+                  </label>
+                </div>
+                <div class="ml-16 mt-5 ">
+                <button id="calculate-amount" class="btn w-full bg-orange-300">Calculate</button>
+                </div>
+        </div>
+
+        <div>
+            <div class="ml-16 mt-5">
+                <label class="form-control"></label>
+                    <div class="label">
+                      <span class="label-text text-lg font-semibold">Savings(%)</span>                
+                    </div>
+                    <input id="savings-input" type="text" placeholder="Your Savings Amount" class="input input-bordered w-full" />  
+                  </label>
+                <button id="savings-calculate" class="btn w-full mt-5 bg-orange-300">Calculate</button>
+
+            </div>
+        </div>
+
+        <div id="result" class="bg-white shadow-xl hidden rounded-xl ml-12 p-5 mt-6">
+            <h1 class="text-xl font-semibold text-center mt-5 text-pink-500">Result Summary</h1>
+
+            <div class="grid grid-cols-2 justify-center gap-6 mt-5 items-center">
+                <div>
+                    <p>Total Expenses</p>
+                    <p>$ <span id="total-expenses">0</span></p>
+                </div>
+                <div>
+                    <p>Balance</p>
+                    <p>$ <span id="total-balance">0</span></p>
+                </div>
+                <div>
+                    <p>Savings Amount</p>
+                    <p>$ <span id="savings-amo">0</span></p>
+                </div>
+                <div>
+                    <p>Remaing Balance</p>
+                    <p>$ <span id="remaing-balance">0</span></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
